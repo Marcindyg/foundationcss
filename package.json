@@ -1,0 +1,32 @@
+{
+  "name": "foundationcss",
+  "version": "0.0.1",
+  "description": "foundations for styles in your project",
+  "main": "dist/scss/index.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lib-scss": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/ -o dist/scss/",
+    "example-scss": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 example/styles/ -o example/",
+    "dev": "npm-run-all --parallel watch-lib-scss watch-example-scss",
+    "watch-lib-scss": "nodemon --watch src/scss/ --ext scss --exec \"npm run lib-scss\"",
+    "watch-example-scss": "nodemon --watch example/styles/ --ext scss --exec \"npm run example-scss\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marcindyg/foundationcss.git"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "Marcin Dygowski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Marcindyg/foundationcss/issues"
+  },
+  "homepage": "https://github.com/Marcindyg/foundationcss#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5"
+  }
+}

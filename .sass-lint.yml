@@ -1,0 +1,156 @@
+files:
+  include: 'src/**/*.s+(a|c)ss'
+options:
+  formatter: html
+  merge-default-rules: false
+  output-file: 'temp/sass-lint.html'
+  max-warnings: 20
+rules:
+  attribute-quotes:
+    - 2
+    - include: true
+  bem-depth:
+    - 2
+    - max-depth: 1
+  border-zero:
+    - 2
+    - convention: none
+  brace-style:
+    - 2
+    - style: 1tbs
+    - allow-single-line: false
+  class-name-format:
+    - 1
+    - convention: hyphenatedbem
+    - allow-leading-underscore: false
+  clean-import-paths: 0
+  declarations-before-nesting: 2
+  empty-args:
+    - 2
+    - include: false
+  empty-line-between-blocks:
+    - 2
+    - include: true
+  extends-before-declarations: 1
+  extends-before-mixins: 1
+  final-newline:
+    - 1
+    - include: true
+  force-attribute-nesting: 0
+  force-element-nesting: 0
+  force-pseudo-nesting: 0
+  function-name-format:
+    - 2
+    - convention: camelcase
+  hex-length:
+    - 2
+    - style: long
+  hex-notation:
+    - 2
+    - style: lowercase
+  id-name-format: 0
+  indentation:
+    - 2
+    - size: 4
+  leading-zero:
+    - 2
+    - include: true
+  max-file-line-count:
+    - 2
+    - length: 300
+  max-line-length:
+    - 2
+    - length: 120
+  mixin-name-format:
+    - 2
+    - convention: camelcase
+  mixins-before-declarations:
+    - 2
+    - exclude: [addClear]
+  nesting-depth:
+    - 2
+    - max-depth: 4
+  no-attribute-selectors: 0
+  no-css-comments: 0
+  no-color-hex: 0
+  no-color-literals: 0
+  no-color-keywords: 2
+  no-combinators: 0
+  no-debug: 1
+  no-disallowed-properties: 0
+  no-duplicate-properties:
+    - 2
+    - exclude: [color, display]
+  no-extends: 0
+  no-empty-rulesets: 2
+  no-ids: 2
+  no-important: 2
+  no-invalid-hex: 2
+  no-mergeable-selectors: 2
+  no-misspelled-properties: 2
+  no-qualifying-elements: 0
+  no-trailing-whitespace: 0
+  no-trailing-zero: 2
+  no-transition-all: 0
+  no-universal-selectors: 0
+  no-url-domains: 1
+  no-url-protocols: 1
+  no-vendor-prefixes: 0
+  no-warn: 1
+  one-declaration-per-line: 2
+  placeholder-in-extend: 0
+  placeholder-name-format: 0
+  property-sort-order:
+    - 2
+    - 
+      order: 'smacss'
+      ignore-custom-properties: true
+  property-units: 0
+  pseudo-element: 0
+  quotes:
+    - 2
+    - style: double
+  shorthand-values:
+    - 2
+    - allowed-shorthands: [1,2]
+  single-line-per-selector: 2
+  space-after-bang:
+    - 2
+    - include: false
+  space-after-colon:
+    - 2
+    - include: true
+  space-after-comma:
+    - 2
+    - include: true
+  space-around-operator:
+    - 2
+    - include: true
+  space-before-bang:
+    - 2
+    - include: true
+  space-before-brace:
+    - 2
+    - include: true
+  space-before-colon:
+    - 2
+    - include: false
+  space-between-parens:
+    - 2
+    - include: false
+  trailing-semicolon:
+    - 2
+    - include: true
+  url-quotes: 0
+  variable-for-property:
+    - 2
+    - properties: []
+  variable-name-format:
+    - 2
+    - convention: hyphenatedlowercase
+  zero-unit:
+    - 2
+    - include: false
+
+
+

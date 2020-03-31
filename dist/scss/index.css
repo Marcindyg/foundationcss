@@ -1,0 +1,121 @@
+/*!
+ * Foundationcss v0.0.1 (https://github.com/Marcindyg/foundationcss)
+ * Copyright 2020 Marcin Dygowski
+ * Licensed under MIT (https://github.com/Marcindyg/foundationcss/blob/master/LICENSE)
+ */
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 375px) {
+  body,
+  html {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 559px) {
+  body,
+  html {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (min-width: 560px) and (max-width: 1023px) {
+  body,
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  body,
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+  body,
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  body,
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  body,
+  html {
+    font-size: 18px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/*# sourceMappingURL=index.css.map */

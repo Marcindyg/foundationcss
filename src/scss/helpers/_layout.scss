@@ -1,0 +1,26 @@
+@mixin container {
+    display: flex;
+    margin: 0 auto;
+
+    @media #{$mobile} { width: #{$container-mobile}#{"%"}; }
+    @media #{$mobile-big} { width: #{$container-mobile-big}#{"%"}; }
+    @media #{$tablet} { width: #{$container-tablet}#{"%"}; }
+    @media #{$tablet-big} { width: #{$container-tablet-big}px; }
+    @media #{$desktop} { width: #{$container-desktop}px; }
+    @media #{$desktop-big} { width: #{$container-desktop-big}px; }
+    @media #{$desktop-wide} { width: #{$container-desktop-wide}px; }
+}
+
+@mixin containerFull {
+    display: flex;
+    width: 100%;
+}
+
+@mixin element {
+    flex: 1;
+}
+
+@mixin column {
+    flex: 1;
+    padding: 0 15px;
+}

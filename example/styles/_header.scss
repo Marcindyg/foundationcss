@@ -1,0 +1,11 @@
+.header {
+    @include container;
+
+    &__logo {
+        @include column;
+    }
+
+    &__navigation {
+        @include column;
+    }
+}
