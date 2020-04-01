@@ -19,6 +19,14 @@ $container-desktop: 1200; // px // 50px column
 $container-desktop-big: 1320; // px // 55px column
 $container-desktop-wide: 1680; // px // 70px column
 
+$column-mobile: 25; // %
+$column-mobile-big: 25; // %
+$column-tablet: 12.5; // %
+$column-tablet-big: 40; // px
+$column-desktop: 50; // px
+$column-desktop-big: 55; // px
+$column-desktop-wide: 70; // px
+
 $mobile: "screen and (max-width: #{$screen-mobile-max}px)";
 $mobile-big: "screen and (min-width: #{$screen-mobile-big-min}px) and (max-width: #{$screen-mobile-big-max}px)";
 $tablet: "screen and (min-width: #{$screen-tablet-min}px) and (max-width: #{$screen-tablet-max}px)";
@@ -26,3 +34,10 @@ $tablet-big: "screen and (min-width: #{$screen-tablet-big-min}px) and (max-width
 $desktop: "screen and (min-width: #{$screen-desktop-min}px) and (max-width: #{$screen-desktop-max}px)";
 $desktop-big: "screen and (min-width: #{$screen-desktop-big-min}px) and (max-width: #{$screen-desktop-big-max}px)";
 $desktop-wide: "screen and (min-width: #{$screen-desktop-wide-min}px)";
+
+$mobile-only: "screen and (max-width: #{$screen-mobile-big-max}px)";
+$tablet-only: "screen and (min-width: #{$screen-tablet-min}px) and (max-width: #{$screen-tablet-big-max}px)";
+$desktop-only: "screen and (min-width: #{$screen-desktop-min}px)";
+
+$not-desktop: "screen and (max-width: #{$screen-tablet-big-max}px)";
+$not-mobile: "screen and (min-width: #{$screen-tablet-min}px)";

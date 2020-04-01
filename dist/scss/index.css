@@ -3,6 +3,12 @@
  * Copyright 2020 Marcin Dygowski
  * Licensed under MIT (https://github.com/Marcindyg/foundationcss/blob/master/LICENSE)
  */
+/*
+ * @mixin column
+ * @param $size | default: 1 | options: number(1-24) || string("full", "half", "quarter")
+ * @param $tablet-size | default: 8 | options: number(1-8) || string("full", "half", "quarter")
+ * @param $mobile-size | default: 4 | options: number(1-4) || string("full", "half", "quarter")
+ */
 body,
 html {
   margin: 0;

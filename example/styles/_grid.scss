@@ -1,0 +1,75 @@
+.grid {
+    @include container;
+
+    .column {
+        position: relative;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px dashed rgba(0, 0, 0, 0.1);
+        min-height: 50px;
+        font-size: 0.75rem;
+        color: rgba(0, 0, 0, 0.5);
+
+        &-1 { @include column(1, 1, 1); }
+        &-2 { @include column(2, 2, 2); }
+        &-3 { @include column(3, 3, 3); }
+        &-4 { @include column(4, 4, half); }
+        &-5 { @include column(5, 5, quarter); }
+        &-6 { @include column(6, 6, quarter); }
+        &-7 { @include column(7, 7, quarter); }
+        &-8 { @include column(8, 8, half); }
+        &-9 { @include column(9, 4, quarter); }
+        &-10 { @include column(10, quarter, 4); }
+        &-11 { @include column(11, half); }
+        &-12 { @include column(12, half); }
+        &-13 { @include column(13, full); }
+        &-14 { @include column(14, half, full); }
+        &-15 { @include column(15, 6, quarter); }
+        &-16 { @include column(16, 4, half); }
+        &-17 { @include column(17, 1, quarter); }
+        &-18 { @include column(18, 2, quarter); }
+        &-19 { @include column(19, 3, quarter); }
+        &-20 { @include column(20, 4, half); }
+        &-21 { @include column(21, 5, 1); }
+        &-22 { @include column(22, 6, 2); }
+        &-23 { @include column(23, 7, 3); }
+        &-24 { @include column(24, 8); }
+
+        &__desktop {
+            display: none; 
+            @media #{$desktop-only} {
+                display: block; 
+            }
+        }
+
+        &__tablet {
+            display: none; 
+            @media #{$tablet-only} {
+                display: block; 
+            }
+        }
+
+        &__mobile {
+            display: none; 
+            @media #{$mobile-only} {
+                display: block; 
+            }
+        }
+
+        &__number {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #000000;
+            color: #ffffff;
+            font-size: 0.5rem;
+            line-height: 1.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            text-align: center;
+        }
+    }
+}

@@ -1,5 +1,6 @@
 @mixin container {
     display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
 
     @media #{$mobile} { width: #{$container-mobile}#{"%"}; }
@@ -19,8 +20,36 @@
 @mixin element {
     flex: 1;
 }
-
-@mixin column {
-    flex: 1;
+/*
+ * @mixin column
+ * @param $size | default: 1 | options: number(1-24) || string("full", "half", "quarter")
+ * @param $tablet-size | default: 8 | options: number(1-8) || string("full", "half", "quarter")
+ * @param $mobile-size | default: 4 | options: number(1-4) || string("full", "half", "quarter")
+ */
+@mixin column($size: 1, $tablet-size: 8, $mobile-size: 4) {
     padding: 0 15px;
+
+    @if type-of($tablet-size) == "string" and $tablet-size == "full" { $tablet-size: 8; }
+    @else if type-of($tablet-size) == "string" and $tablet-size == "half" {$tablet-size: 4; }
+    @else if type-of($tablet-size) == "string" and $tablet-size == "quarter" { $tablet-size: 2; }
+    @else if type-of($tablet-size) == "number" and $tablet-size > 8 { $tablet-size: 8;}
+    @else if type-of($tablet-size) == "number" and $tablet-size <= 0 { $tablet-size: 1; }
+    @else if type-of($tablet-size) == "number" and $tablet-size > 0 and $tablet-size <= 8 { $tablet-size: $tablet-size; }
+    @else { $tablet-size: 8; }
+
+    @if type-of($mobile-size) == "string" and $mobile-size == "full" { $mobile-size: 4; }
+    @else if type-of($mobile-size) == "string" and $mobile-size == "half" { $mobile-size: 2; }
+    @else if type-of($mobile-size) == "string" and $mobile-size == "quarter" { $mobile-size: 1; }
+    @else if type-of($mobile-size) == "number" and $mobile-size > 4 { $mobile-size: 4; }
+    @else if type-of($mobile-size) == "number" and $mobile-size <= 0 { $mobile-size: 1; }
+    @else if type-of($mobile-size) == "number" and $mobile-size > 0 and $mobile-size <= 4 { $mobile-size: $mobile-size; }
+    @else { $mobile-size: 4; }
+
+    @media #{$desktop-wide} { width: #{$column-desktop-wide*$size}px; }
+    @media #{$desktop-big} { width: #{$column-desktop-big*$size}px; }
+    @media #{$desktop} { width: #{$column-desktop*$size}px; }
+    @media #{$tablet-big} { width: #{$column-tablet-big*$size}px; }
+    @media #{$tablet} { width: #{$column-tablet*$tablet-size}#{"%"}; }
+    @media #{$mobile-big} { width: #{$column-mobile-big*$mobile-size}#{"%"}; }
+    @media #{$mobile} { width: #{$column-mobile*$mobile-size}#{"%"}; }
 }
